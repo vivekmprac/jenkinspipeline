@@ -1,0 +1,15 @@
+pipeline {
+    agent {
+        node {
+            label "Slave1"
+            customWorkspace "/home/abhi/customWorkspace"
+        }
+    }
+    stages {
+        stage("build"){
+            steps {
+                echo "hello world"
+            }
+        }
+    }
+}
